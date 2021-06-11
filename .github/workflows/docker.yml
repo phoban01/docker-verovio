@@ -53,6 +53,7 @@ jobs:
         --build-arg SRC_REPO=${{ github.repository }} \
         --build-arg BUILD_SHA=$(env.GITHUB_SHA) \
         --tag ghcr.io/phoban01/${{ env.NAME }}:${{ env.VERSION }} \
+        --tag ghcr.io/phoban01/${{ env.NAME }}:latest \
         --push  -f Dockerfile .
 
     - name: Move cache
